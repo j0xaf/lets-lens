@@ -111,8 +111,8 @@ fmapT ::
   (a -> b)
   -> t a
   -> t b
-fmapT =
-  error "todo: fmapT"
+fmapT f =
+  getIdentity . traverse (\a -> Identity (f a))
 
 -- | Let's refactor out the call to @traverse@ as an argument to @fmapT@.
 over :: 
