@@ -141,9 +141,8 @@ type Set s t a b =
 -- unwrapping.
 sets ::
   ((a -> b) -> s -> t)
-  -> Set s t a b  
-sets =
-  error "todo: sets"
+  -> Set s t a b
+sets f s = Identity . f (getIdentity . s)
 
 mapped ::
   Functor f =>
