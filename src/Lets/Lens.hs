@@ -147,8 +147,11 @@ sets f s = Identity . f (getIdentity . s)
 mapped ::
   Functor f =>
   Set (f a) (f b) a b
-mapped =
-  error "todo: mapped"
+mapped = sets fmap
+
+--    ((a -> Identity b) -> [a] -> [b]) -- we have ((a -> Identity b)), we need ((a -> b) -> [a] -> [b])
+-- -> [a]
+-- -> Identity [b]
 
 set ::
   Set s t a b
