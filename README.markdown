@@ -60,6 +60,12 @@ This representation presents a generalisation, permitting *polymorphic update*
 over structures. After lenses are derived, further concepts are introduced, such
 as `Fold`s, `Traversal`s and `Prism`s.
 
+### Run doctests
+
+```shell
+[nix-shell:~/lets-lens]$ (cd src; doctest Lets/Lens.hs)
+```
+
 ----
 
 ### Credits
