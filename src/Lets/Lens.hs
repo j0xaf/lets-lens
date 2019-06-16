@@ -120,8 +120,7 @@ over ::
   -> (a -> b)
   -> s
   -> t
-over =
-  error "todo: over"
+over f g = getIdentity . f (Identity . g)
 
 -- | Here is @fmapT@ again, passing @traverse@ to @over@.
 fmapTAgain ::
