@@ -158,8 +158,7 @@ set ::
   -> s
   -> b
   -> t
-set =
-  error "todo: set"
+set f s b = getIdentity $ f (const (Identity b)) s
 
 ----
 
